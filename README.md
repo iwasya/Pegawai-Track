@@ -150,7 +150,7 @@ Pegawai-Track adalah aplikasi web berbasis Laravel yang berfungsi untuk mencatat
 ## Panduan Penggunaan
 
 1.  Akses aplikasi melalui browser (`http://localhost:8000`).
-2.  Login dengan akun yang sudah terdaftar. Jika belum memiliki akun, register terlebih dahulu.
+2.  Login dengan akun yang sudah terdaftar. Jika belum memiliki akun Hubungi HRD.
 3.  Setelah login, Anda akan diarahkan ke halaman dashboard.
 4.  Navigasi ke menu-menu yang tersedia di sidebar untuk mengelola data pegawai, absensi, cuti, jadwal, dan lainnya.
 5.  Gunakan fitur pencarian dan filter untuk memudahkan pengelolaan data.
