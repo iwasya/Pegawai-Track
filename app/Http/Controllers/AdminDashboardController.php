@@ -9,7 +9,7 @@ use App\Models\Pegawai;
 use App\Models\Gaji;
 use App\Models\Absensi;
 
-class HomeController extends Controller
+class AdminDashboardController extends Controller
 {
     public function index()
     {
