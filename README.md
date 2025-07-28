@@ -1,66 +1,187 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# Pegawai-Track
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+Pegawai-Track adalah aplikasi web berbasis Laravel yang berfungsi untuk mencatat absensi dan menghitung gaji pegawai secara otomatis dan efisien, cocok digunakan untuk kebutuhan internal manajemen SDM perusahaan.
 
-## About Laravel
+## Fitur dan Fungsionalitas
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+*   **Manajemen User:**
+    *   Tambah, edit, dan hapus user dengan role yang berbeda (admin, HRD, pegawai).
+    *   Pengaturan status akun (aktif/nonaktif).
+    *   Export data user ke file Excel.
+    *   Menampilkan daftar user yang sedang aktif (online) dan IP Address terakhir.
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+*   **Manajemen Jabatan:**
+    *   Tambah, edit, dan hapus data jabatan.
+    *   Input nama jabatan dan gaji pokok.
+    *   Export data jabatan ke file Excel.
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+*   **Manajemen Pegawai:**
+    *   Tambah, edit, dan hapus data pegawai (soft delete).
+    *   Input NIP, nama lengkap, jabatan, jenis kelamin, tanggal lahir, tanggal masuk, nomor telepon, alamat, email, status kerja, dan foto.
+    *   Restore data pegawai yang terhapus.
+    *   Hapus permanen data pegawai.
+    *   Export data pegawai ke file Excel.
 
-## Learning Laravel
+*   **Manajemen Absensi:**
+    *   (Fitur ini belum diimplementasikan secara detail berdasarkan file yang ada, namun terdapat di navigasi sidebar sehingga diasumsikan ada).
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+*   **Manajemen Cuti:**
+    *   Pengajuan cuti oleh pegawai dengan pilihan jenis cuti (tahunan, sakit, khusus).
+    *   Upload foto sebagai bukti (khusus cuti sakit).
+    *   Persetujuan/penolakan cuti oleh HRD.
+    *   Export data cuti ke file Excel.
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+*   **Manajemen Jadwal Kerja:**
+    *   Tambah, edit, dan hapus jadwal kerja pegawai.
+    *   Input hari, tanggal, shift, jam mulai, jam selesai, dan keterangan.
+    *   Generate jadwal kerja mingguan secara otomatis.
+    *   Export data jadwal kerja ke file Excel.
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+*   **Manajemen Gaji:**
+    *   (Fitur ini belum diimplementasikan secara detail berdasarkan file yang ada, namun terdapat di navigasi sidebar sehingga diasumsikan ada).
 
-## Laravel Sponsors
+*   **Laporan:**
+    *   (Fitur ini belum diimplementasikan secara detail berdasarkan file yang ada, namun terdapat di navigasi sidebar sehingga diasumsikan ada).
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+*   **Profil Pegawai:**
+    *   Pegawai dapat melihat data profilnya sendiri.
+    *   Menampilkan jadwal kerja pegawai (kalender).
+    *   Menampilkan tanggal merah (libur nasional).
 
-### Premium Partners
+*   **Autentikasi dan Otorisasi:**
+    *   Login dan register user.
+    *   Logout user.
+    *   Middleware untuk membatasi akses berdasarkan role (admin, HRD, pegawai).
+    *   Pengecekan status akun (aktif/nonaktif) sebelum login.
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
+*   **Log Aktivitas:**
+    *   Mencatat aktivitas login user (ID user, aktivitas, tanggal/waktu, IP address).
 
-## Contributing
+## Teknologi yang Digunakan
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+*   **PHP:** Bahasa pemrograman utama.
+*   **Laravel:** Framework PHP yang digunakan.
+*   **MySQL:** Database yang digunakan (diasumsikan berdasarkan konfigurasi database).
+*   **Bootstrap:** Framework CSS untuk tampilan antarmuka.
+*   **Maatwebsite/Excel:** Library untuk export data ke file Excel.
+*   **Calendarific API:** API untuk mendapatkan data tanggal merah (libur nasional).
+*   **FullCalendar:** Library JavaScript untuk menampilkan kalender jadwal pegawai.
+*   **Composer:** Dependency Manager untuk PHP
 
-## Code of Conduct
+## Prasyarat
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+*   PHP >= 8.1
+*   Composer
+*   MySQL
+*   Web Server (Apache atau Nginx)
+*   Node.js dan NPM (jika ingin melakukan kompilasi ulang assets)
+*   API Key untuk Calendarific (optional)
 
-## Security Vulnerabilities
+## Instalasi
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+1.  Clone repositori:
 
-## License
+    ```bash
+    git clone https://github.com/iwasya/Pegawai-Track.git
+    cd Pegawai-Track
+    ```
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+2.  Install dependencies Composer:
+
+    ```bash
+    composer install
+    ```
+
+3.  Copy file `.env.example` menjadi `.env`:
+
+    ```bash
+    cp .env.example .env
+    ```
+
+4.  Generate application key:
+
+    ```bash
+    php artisan key:generate
+    ```
+
+5.  Konfigurasi database pada file `.env`.  Sesuaikan dengan konfigurasi database MySQL Anda:
+
+    ```
+    DB_CONNECTION=mysql
+    DB_HOST=127.0.0.1
+    DB_PORT=3306
+    DB_DATABASE=pegawai_track  # Ganti dengan nama database Anda
+    DB_USERNAME=root         # Ganti dengan username database Anda
+    DB_PASSWORD=             # Ganti dengan password database Anda
+    ```
+
+6.  Migrasi database:
+
+    ```bash
+    php artisan migrate
+    ```
+
+7.  Jalankan seeder (opsional, jika ingin data dummy):
+        ```bash
+    php artisan db:seed
+    ```
+
+8.  Symlink direktori `storage`:
+
+    ```bash
+    php artisan storage:link
+    ```
+
+9.  Install dan compile assets (jika diperlukan):
+
+    ```bash
+    npm install
+    npm run build
+    ```
+
+10. Jalankan server:
+
+    ```bash
+    php artisan serve
+    ```
+
+    Aplikasi akan berjalan pada `http://localhost:8000`.
+
+## Panduan Penggunaan
+
+1.  Akses aplikasi melalui browser (`http://localhost:8000`).
+2.  Login dengan akun yang sudah terdaftar. Jika belum memiliki akun, register terlebih dahulu.
+3.  Setelah login, Anda akan diarahkan ke halaman dashboard.
+4.  Navigasi ke menu-menu yang tersedia di sidebar untuk mengelola data pegawai, absensi, cuti, jadwal, dan lainnya.
+5.  Gunakan fitur pencarian dan filter untuk memudahkan pengelolaan data.
+6.  Gunakan tombol export untuk mengekspor data ke format Excel.
+
+### Konfigurasi Tambahan
+* Untuk menggunakan fitur upload foto cuti, pastikan direktori `storage/app/public/foto_cuti` memiliki permission yang benar (writeable).
+* Untuk mendapatkan data libur nasional, daftarkan API Key di [Calendarific](https://calendarific.com/) dan tambahkan ke file `.env`
+    ```
+    CALENDARIFIC_API_KEY=YOUR_API_KEY
+    ```
+
+## API Documentation
+
+Saat ini tidak ada API khusus yang diimplementasikan.  Aplikasi ini berfokus pada antarmuka web untuk manajemen data.
+
+## Kontribusi
+
+Kontribusi sangat dipersilakan! Jika Anda ingin berkontribusi pada proyek ini, silakan ikuti langkah-langkah berikut:
+
+1.  Fork repositori ini.
+2.  Buat branch dengan nama fitur atau perbaikan bug: `git checkout -b fitur-baru` atau `git checkout -b perbaikan-bug`.
+3.  Lakukan perubahan dan commit dengan pesan yang jelas.
+4.  Push branch ke repositori Anda.
+5.  Buat Pull Request ke repositori ini.
+
+## Lisensi
+
+Tidak ada informasi lisensi yang diberikan.
+
+## Kontak/Support
+
+*   [Iwasya](https://github.com/iwasya)
+*   Silakan ajukan issue di GitHub untuk pertanyaan atau laporan bug.
