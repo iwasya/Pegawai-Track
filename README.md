@@ -179,7 +179,8 @@ Kontribusi sangat dipersilakan! Jika Anda ingin berkontribusi pada proyek ini, s
 
 ## Lisensi
 
-Tidak ada informasi lisensi yang diberikan.
+Proyek ini dilisensikan di bawah [MIT License](https://opensource.org/licenses/MIT).
+
 
 ## Kontak/Support
 
