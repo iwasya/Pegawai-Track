@@ -1,4 +1,5 @@
 # Pegawai-Track
+![WhatsApp Image 2025-06-29 at 18 57 03_7208dd40](https://github.com/user-attachments/assets/ffe16dcd-357d-4708-a585-05a820a0a3c5)
 
 Pegawai-Track adalah aplikasi web berbasis Laravel yang berfungsi untuk mencatat absensi dan menghitung gaji pegawai secara otomatis dan efisien, cocok digunakan untuk kebutuhan internal manajemen SDM perusahaan.
 
